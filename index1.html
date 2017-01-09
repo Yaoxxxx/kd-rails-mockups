@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>kime</title>
+</head>
+
+<body>
+	<h1>記名システム</h1>
+	<form action="">
+	名前：
+	<input type="text" id="a" name="name" value="">
+	出席番号:
+	<input type=" text" id="b" name="number" value="">
+	<input type='button' id="submit" value="提交"/>
+</form>
+
+<script type="text/javascript">
+    window.onload = function(){
+        var submit = document.getElementById("submit");
+        var text = document.getElementById('a');
+		var text1 = document.getElementById('b');
+        var target = document.getElementById('target');
+            submit.onclick = function(e){
+                if(text.value + text.value !=""){
+					target.textContent =  text.value  +    text1.value;
+            }
+        };
+    };
+</script>
+<body>
+ <br/>
+<span style="color:red">出席人数:</span>
+<hr/>
+<br/>
+<span id="target" style="color:green;padding-left:10px;"></span>
+</body>
+</html>
+
